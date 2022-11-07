@@ -39,7 +39,7 @@
     </header>
     <nav>
         <ul>
-            <li>sites <i class="fas fa-caret-down"></i>
+            <li data-target="dropdown">sites <i class="fas fa-caret-down"></i>
                 <!-- <div class='arrow-down'><div></div></div>-->
             </li>
             <li><a href="#">redes sociais</a></li>
@@ -48,9 +48,54 @@
             <li><a href="#">landing pages</a></li>
         </ul>
         <form action="">
-            <input type="text"> <button type="submit"><i class="fa fa-search" style="color:#E2F7FF"></i></button>
+            <input type="text" placeholder="Digite sua pesquisa"><button type="submit"><i class="fa fa-search" style="color:#E2F7FF"></i></button>
         </form>
     </nav>
+    <ul class="mapa-do-site dropdown" data-state="false">
+        <li>
+            <ul>
+                <li>Soluções Site</li>
+                <hr>
+                <br>
+                <li><a href="#">Briefing</a></li>
+                <li><a href="#">Pesquisa</a></li>
+                <li><a href="#">Criação</a></li>
+                <li><a href="#">Veiculação</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li>Soluções por E-commerce</li>
+                <hr>
+                <br>
+                <li><a href='#'>Lorem</a></li>
+                <li><a href="#">Ipsum</a></li>
+                <li><a href="#">Dolor</a></li>
+                <li><a href="#">Google Ads</a></li>
+                <li><a href="#">Análise de mercado</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li>Soluções por Redes Sociais</li>
+                <hr>
+                <br>
+                <li><a href="#">Briefing</a></li>
+                <li><a href="#">Pesquisa</a></li>
+                <li><a href="#">Criação</a></li>
+                <li><a href="#">Veiculação</a></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li>Soluções por Landing Pages</li>
+                <hr>
+                <br>
+                <li><a href="#">Conteúdo</a></li>
+                <li><a href="#">Relatórios</a></li>
+            </ul>
+        </li>
+    </ul>
     <img src="src\img\banner.png" class='banner border-secondary' alt="banner">
     <main>
         <section id='services'>
@@ -65,32 +110,29 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">
-                        <div class="card-swiper">
-                            <img src="src\img\alt_route_black_24dp.svg" alt="">
-                            <h2>Título</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
-                        </div>
+                    <div class="swiper-slide card-swiper">
+                        <img src="src\img\alt_route_black_24dp.svg" alt="">
+                        <h2>Título</h2>
+                        <br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="card-swiper">
-                            <img src="src\img\headset_mic_black_24dp.svg" alt="">
-                            <h2>Serviço</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
-                        </div>
+                    <div class="swiper-slide card-swiper">
+                        <img src="src\img\headset_mic_black_24dp.svg" alt="">
+                        <h2>Serviço</h2>
+                        <br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="card-swiper">
-                            <img src="src\img\inventory_black_24dp.svg" alt="">
-                            <h2>Exemplo</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            </p>
-                        </div>
+                    <div class="swiper-slide card-swiper">
+                        <img src="src\img\inventory_black_24dp.svg" alt="">
+                        <h2>Exemplo</h2>
+                        <br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
                     </div>
                 </div>
                 <!-- If we need navigation buttons -->

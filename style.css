@@ -10,9 +10,9 @@
     font-size: 14px;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:768px) {
     :root {
-        font-size: 11px;
+        font-size: 12px;
     }
 }
 
@@ -168,6 +168,22 @@ input[type='submit'] {
     height: auto;
 }
 
+.mapa-do-site {
+    gap: 30px;
+    font-family: 'Roboto Slab';
+    font-weight: 500;
+}
+
+.mapa-do-site ul {
+    flex-flow: column wrap;
+    gap: 10px;
+}
+
+.mapa-do-site ul li:first-child {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
 body>*:nth-child(2) {
     margin-top: var(--header-height);
 }
@@ -228,6 +244,12 @@ section {
     border-bottom: 5px solid var(--secondary-color);
 }
 
+*::placeholder {
+    position: relative;
+    left: 10px;
+    font-size: calc(1rem - 2px);
+}
+
 header button {
     appearance: none;
     border: none;
@@ -254,10 +276,15 @@ nav {
     justify-content: space-around;
     align-items: center;
     text-transform: uppercase;
+    position: relative;
 }
 
 nav form {
     font-size: 1.25rem;
+}
+
+nav form input::placeholder {
+    color: #00AEEF;
 }
 
 nav form input,
@@ -274,6 +301,48 @@ nav form button {
     right: 2rem;
 }
 
+.mapa-do-site.dropdown {
+    width: 85vw;
+    margin: 0px 7.5vw;
+    padding: 20px 10% 40px;
+    background: white;
+    position: absolute;
+    border-top: 5px solid var(--secondary-color);
+    /* transition: all .3s linear; */
+}
+
+.mapa-do-site.dropdown[data-state=false] {
+    top: -30%;
+    opacity: 0;
+}
+
+.mapa-do-site.dropdown[data-state=true] {
+    top: calc(var(--header-height) + var(--nav-height));
+    opacity: 1;
+}
+
+.mapa-do-site.dropdown {
+    color: gray;
+}
+
+.mapa-do-site.dropdown hr {
+    width: 100%;
+    border-width: .1px;
+}
+
+.mapa-do-site.dropdown li:first-child {
+    color: #005271;
+    font-weight: bold;
+}
+
+.mapa-do-site.dropdown, .mapa-do-site.dropdown ul {
+    align-items: flex-start;
+}
+
+.mapa-do-site.dropdown ul li:first-child {
+    color: #005271;
+}
+
 #services {
     align-items: center;
     justify-content: center;
@@ -284,8 +353,6 @@ nav form button {
 }
 
 .card-swiper {
-    width: 284px;
-    height: 316px;
     display: flex;
     flex-flow: column wrap;
     align-items: center;
@@ -294,7 +361,14 @@ nav form button {
     /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: box-shadow .5s linear;
+    padding: 20px;
+    transition: box-shadow 500s linear;
+    transform: scale(0.9) !important;
+}
+
+.card-swiper img {
+    width: 62.25%;
+    height: auto;
 }
 
 .card-swiper:hover {
@@ -358,6 +432,7 @@ nav form button {
     align-items: center;
     background: #e8e8e8;
     height: min-content;
+    padding: 10px;
     transform: scale(0.9) !important;
 }
 
@@ -465,8 +540,6 @@ nav form button {
 }
 
 #newsletter form input::placeholder {
-    position: relative;
-    left: 20px;
     font-family: 'Roboto Slab';
     font-weight: 400;
     color: #005271;
@@ -476,11 +549,6 @@ footer {
     border-top: 5px solid var(--secondary-color);
     background: var(--primary-color);
     padding: 30px 0px;
-}
-
-footer * {
-    font-family: 'Roboto Slab';
-    font-weight: 500;
 }
 
 footer>div {
@@ -500,15 +568,6 @@ footer>div:first-child {
     border-bottom: 2px solid white;
 }
 
-footer .mapa-do-site {
-    gap: 30px;
-}
-
-footer .mapa-do-site ul {
-    flex-flow: column wrap;
-    gap: 10px;
-}
-
 footer .mapa-do-site li {
     color: #00AEEF;
 }
@@ -518,9 +577,7 @@ footer .mapa-do-site>li:last-child * {
 }
 
 footer .mapa-do-site ul li:first-child {
-    font-size: 1.5rem;
     color: #E2F7FF;
-    font-weight: 900;
 }
 
 footer>div:last-child {
@@ -544,7 +601,7 @@ footer>div:last-child ul {
     font-size: 1.5rem;
 }
 
-@media screen and (max-width:919px) {
+@media screen and (max-width:1023px) {
     footer>div:first-child {
         grid-template-columns: 100%;
         gap: 20px;
@@ -561,7 +618,7 @@ footer>div:last-child ul {
     }
 }
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:1024px) {
 
     section {
         flex-direction: column;
