@@ -16,14 +16,14 @@
 <body>
     <header class="border-secondary">
         <img src="src\img\logo.png" alt="logo">
-        <ul>
+        <ul class="display-md">
             <li><a href="#">Nerdweb</a></li>
             <li><a href="#">Serviços</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Atendimento</a></li>
         </ul>
         <ul>
-            <li>
+            <li class="display-md">
                 <button role='button'>
                     <span>DIA A DIA
                         <i class='fas fa-caret-down'></i>
@@ -35,11 +35,12 @@
             </li>
             <li><a href="#"><i class='fa fa-shopping-cart'
                         style="color:var(--secondary-color);font-size:1.5rem;"></i></a></li>
+            <li class="display-mobile" data-target="#mobile-modal"><a href="#"><i class='fas fa-bars'style="color:gray;font-size:1.5rem;"></i></a></li>
         </ul>
     </header>
-    <nav>
+    <nav class="display-lg">
         <ul>
-            <li data-target="dropdown">sites <i class="fas fa-caret-down"></i>
+            <li data-target="#nav-dropdown"><a href='#'>sites <i class="fas fa-caret-down"></a></i>
                 <!-- <div class='arrow-down'><div></div></div>-->
             </li>
             <li><a href="#">redes sociais</a></li>
@@ -51,7 +52,7 @@
             <input type="text" placeholder="Digite sua pesquisa"><button type="submit"><i class="fa fa-search" style="color:#E2F7FF"></i></button>
         </form>
     </nav>
-    <ul class="mapa-do-site dropdown" data-state="false">
+    <ul class="mapa-do-site display-lg" id="nav-dropdown" data-state="false">
         <li>
             <ul>
                 <li>Soluções Site</li>
@@ -342,7 +343,26 @@
             </div>
         </div>
     </footer>
-
+    <ul class="display-mobile" id="mobile-modal" data-state="false">
+        <img src="src/img/Grupo 549.png" alt="">
+        <li><a href="#">Nerdweb</a></li>
+        <li><a href="#">Serviços</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href='#'>Atendimento</a></li>
+        <hr>
+        <li data-target="#dropdown-modal"><a href="#">Sites <i class="fas fa-caret-down"></i></a></li>
+        <ul id="dropdown-modal" data-state="false">
+            <li><a href="#">Soluções Site</a></li>
+            <li><a href="#">Soluções por E-commerce</a></li>
+            <li><a href="#">Soluções por Redes Sociais</a></li>
+            <li><a href="#">Soluções por Landing Page</a></li>
+        </ul>
+        <li><a href="#">Redes Sociais</a></li>
+        <li><a href="#">E-commerce</a></li>
+        <li><a href="#">Mídia Online</a></li>
+        <li><a href="#">Landing Pages</a></li>
+        <h1 data-target="#mobile-modal">X</h1>
+    </ul>
     <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </body>

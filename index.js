@@ -1,16 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let btn_target = document.querySelector('[data-target=dropdown]');
-    btn_target.addEventListener('click', (e) => {
-        if(document.querySelector('.' + btn_target.dataset.target).dataset.state == 'false') {
-            document.querySelector('.' + btn_target.dataset.target).dataset.state = 'true';
-            btn_target.children[0].classList.remove('fa-caret-down');
-            btn_target.children[0].classList.add('fa-caret-up');
-        } else {
-            document.querySelector('.' + btn_target.dataset.target).dataset.state = 'false';
-            btn_target.children[0].classList.remove('fa-caret-up');
-            btn_target.children[0].classList.add('fa-caret-down');
-        }
-    });
+    for(let btn of document.querySelectorAll('[data-target]')) {
+        btn.addEventListener('click', (e) => {
+            if(document.querySelector(btn.dataset.target).dataset.state == 'false') {
+                document.querySelector(btn.dataset.target).dataset.state = 'true';
+                if( btn.children[0].children[0].classList.contains('fa-caret-down')) {
+                    btn.children[0].children[0].classList.remove('fa-caret-down');
+                    btn.children[0].children[0].classList.add('fa-caret-up');
+                }
+            } else {
+                document.querySelector(btn.dataset.target).dataset.state = 'false';
+                if( btn.children[0].children[0].classList.contains('fa-caret-up')) {
+                    btn.children[0].children[0].classList.remove('fa-caret-up');
+                    btn.children[0].children[0].classList.add('fa-caret-down');
+                }
+            }
+        });
+    }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -53,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 10,
         breakpoints: {
             // when window width is >= 768px
-            361: {
+            426: {
                 slidesPerView: 3,
                 spaceBetween: 30
             },
