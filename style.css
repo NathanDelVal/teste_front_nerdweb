@@ -746,8 +746,11 @@ footer>div:last-child ul {
         align-items: center;
     }
 
+}
+
+@media screen and (max-width:768px) {
     #services {
-        flex-direction: column-reverse;
+        flex-direction: column-reverse !important;
     }
 }
 
