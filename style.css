@@ -48,8 +48,7 @@
     font-family: 'Roboto';
 }
 
-a,
-button * {
+a {
     position: relative;
     padding: 0.2em 0;
 }
